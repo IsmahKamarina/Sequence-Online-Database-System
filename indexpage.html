@@ -1,0 +1,117 @@
+<html>
+	<head><title>Main page</title>
+	<style>
+	.header{
+		width:100%;
+		border-top: 5px solid blue;
+		text-align:center;
+		background-color: #b3eff1;
+		padding: 20px;
+	}
+	
+	.topnav{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: black;
+		width:100%;
+	}
+	
+	a{
+		float:left;
+		display: block;
+		background-color: black;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	
+	a:hover{
+		background-color: #b3eff1;
+		color: black;
+		cursor: pointer;
+		
+	}
+	
+	.row{
+		padding:0 8px;
+	}
+	
+	.row::after{
+		padding:0 8px;
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	.side{
+		float:left;
+		width: 25%;
+		
+	}
+	
+	.middle{
+		float:left;
+		width: 50%;
+	}
+	
+	.footer{
+		width:100%;
+		text-align:center;
+		background-color: #b3eff1;
+		padding: 20px;
+	}
+	</style>
+	</head>
+	
+	<body>
+	<div class="header">
+	<h1>Sequence Online Database System</h1>
+	This online database provides the information on the sequences...
+	</div>
+	
+	<div class="topnav">
+	<a href=SequenceEntryForm.html target="_blank"> Entry Form for Sequence </a>
+	<a href=tableSeq.html target="_self"> List of Nucleotides </a>
+	<a href=tableProtein.html target="_self"> List of Protein Sequences </a>
+	<a href=SequenceAnalysis.html target="_blank"> Real-time Sequence Analysis </a>
+	</div>
+	
+	<div class="row">
+		<div class="side">
+			<h2>Terms</h2>
+				<ul type="square">
+					<li> DNA </li>
+					<li> RNA </li>
+					<li> Protein </li>
+					<li> Transcription </li>
+					<li> Translation </li>
+				</ul>
+		</div>
+		
+		<div class="middle">
+			<h2>What is the 'Central Dogma'?</h2>
+			The 'Central Dogma' is the process by which the instructions in DNA are converted into a functional product.
+			It was first proposed in 1958 by Francis Crick, discoverer of the structure of DNA. <br>
+			<p>
+			<img src ="Central-Dogma-DNA-to-RNA-to-Protein.png" alt ="central_dogma" style="width:90%">
+			</p>
+		</div>
+		
+		<div class="side">
+			<h2>Contact Us</h2>
+			UM<br>
+			abc@xyz.com
+		</div> <br>
+		
+	</div> 
+	
+	<div class="footer">
+	Copyright by Ismah
+	</div>
+	
+	</body>
+
+</html>

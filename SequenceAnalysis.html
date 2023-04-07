@@ -1,0 +1,106 @@
+<html>
+	<head><title>Sequence Analysis</title>
+	<link rel=stylesheet href=styleButton.css>
+	<style>
+	#form2 {
+			border-radius: 25px;
+			background-color: #E834E0;
+			padding: 20px;
+		}
+	</style>
+	</head>
+	<body>
+	<h1 align=center><font color="#5ab0b6">Sequence Analysis</font></h1>
+	<div align=center id=form1>
+	<table width=50%>
+	<tr><td>
+	
+	<form id="formquery">
+		<fieldset>
+		<legend>Entry form</legend>
+		
+		Moltype:
+		<input type=radio id=mtype name=moltype value=dna>DNA&nbsp;&nbsp;&nbsp;
+		<input type=radio id=mtype name=moltype value=protein>Protein<br>
+		
+		<p>
+		Sequence:<br>
+		<textarea id="sequence" name="seq" rows=4 cols=50></textarea>
+		<br>
+		</p>
+		
+		<br>
+		<input type=button id=run name=run value=Submit onclick=runAnalysis()>&nbsp;&nbsp;&nbsp;
+		<input type=button id=reset name=reset value=Reset onclick=location.reload()>&nbsp;&nbsp;&nbsp;
+		<input type=button id=cancel name=cancel value=Cancel onclick=window.close(); return true;>
+		
+		</fieldset>
+
+	</form>
+	</td></tr>
+	</table> 
+	</div>
+
+	<h1 align=center><font color="#5ab0b6">Result of Sequence Analysis</font></h1>
+	<div align=center id=form2>
+		<p id=seqLen></p>
+		<p id=resACGT></p>
+		<p id=gcContent></p>
+		<p id=rna></p>
+	</div>
+	
+	<script>
+		function runAnalysis(){
+			var seq = document.getElementById('sequence').value;
+			
+			var mol;
+			
+			var seqLength=0;
+			var countA = 0, countC = 0, countG = 0, countT = 0;
+			
+			var gc = 0;
+			let rna = '';
+			
+			if (document.getElementById('mtype').checked){
+				seqLength = seq.length;
+				
+				for(var i=0; i<seqLength; i++){
+					if (seq[i]== 'a'){
+						countA++;
+					}
+					
+					if (seq[i]== 'c'){
+						countC++;
+					}
+					
+					if (seq[i]== 'g'){
+						countG++;
+					}
+					
+					if (seq[i]== 't'){
+						countT++;
+						rna += 'u';
+					}
+					
+					else{
+						rna += seq[i];
+					}
+					
+				}
+				
+				gc = ((countC + countG) / seqLength) *100
+				document.getElementById('seqLen').innerHTML = "Sequence length:" + seqLength;
+				document.getElementById('resACGT').innerHTML = "Number of bases: " + countA + "a " + countC + "c " + countG + "g " + countT + "t ";
+				document.getElementById('gcContent').innerHTML = "Percentage of GC Content:" + gc + "%";
+				document.getElementById('rna').innerHTML = "RNA: " + rna;
+				
+			}
+			
+			else{
+				seqLength = seq.length;
+				document.getElementById('seqLen').innerHTML = "Sequence Length: " + seqLength;
+			}
+		}	
+	</script>
+	</body>
+</html>

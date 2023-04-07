@@ -1,0 +1,26 @@
+		#seqs {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+		
+		#seqs td, #seqs th {
+			border: 1px solid #ddd;
+			padding: 10px;
+		}
+		
+		#seqs tr:nth-child(even){
+			background-color: #d9f2f3;
+		}
+		
+		#seqs tr:hover {
+			background-color: #b3eff1;
+		}
+		
+		#seqs th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #099ba0;
+			color: white;
+		}

@@ -1,0 +1,85 @@
+<html>
+	<head><title>dna table</title>
+	<style>
+		#seqs {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+		
+		#seqs td, #seqs th {
+			border: 1px solid #ddd;
+			padding: 10px;
+		}
+		
+		#seqs tr:nth-child(even){
+			background-color: #d9f2f3;
+		}
+		
+		#seqs tr:hover {
+			background-color: #b3eff1;
+		}
+		
+		#seqs th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #099ba0;
+			color: white;
+		}
+		
+		input[type=button]:hover {
+			background-color: #338e94  ;
+		}
+		
+		input[type=button] {
+			background-color: #099ba0;
+			border: none;
+			color: white;
+			padding: 15px 30px;
+			text-align: center;
+			border-radius: 5px;
+			cursor: pointer;
+
+		}
+	</style>
+	</head>
+	
+	<body>
+	<h1>List of Protein Sequence</h1>
+	<table id=seqs>
+	<tr>
+		<th>No.</th>
+		<th>Sequence</th>
+	</tr>
+	
+	<tr>
+		<td>1</td>
+		<td>vhklyeek</td>
+	</tr>
+	
+	<tr>
+		<td>2</td>
+		<td>qgaepfddaghiklwyggh</td>
+	</tr>
+	
+	<tr>
+		<td>3</td>
+		<td>qqqhapllkwhimnagvv</td>
+	</tr>
+	
+	<tr>
+		<td>4</td>
+		<td>wkhlppaagkkww</td>
+	</tr>
+	
+	<tr>
+	<td>5</td>
+	<td>plyvvavvewwgeeaaa</td>
+	</tr>
+	
+	</table>
+	<input type=button value="<< Index Page" onClick=history.go(-1); return true; />
+	</body>
+
+</html>
